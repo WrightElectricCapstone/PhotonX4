@@ -17,17 +17,12 @@ IPAddress Remote;
 
 
 
-void handler(const char *topic, const char *data) {
-    Serial.println("received " + String(topic) + ": " + String(data));
-}
-
 void setup()
 {
 	CommLink.StartSerial(BAUD_RATE);
 	CommLink.StartNetwork(&Udp, UDP_PORT);
-	Serial.begin(115200);
-    Particle.subscribe("particle/device/ip", handler);
-    Particle.publish("particle/device/ip");
+	Serial.begin();
+    Serial.println(WiFi.localIP());
 }
 
 void loop()
