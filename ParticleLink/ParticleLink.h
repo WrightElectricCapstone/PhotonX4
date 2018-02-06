@@ -53,7 +53,7 @@ public:
 	/*
 	**Sends Mavlink message packet buffer over UDP connection
 	*/
-	int SendMessageOnNetwork(UDP* Udp, IPAddress* Remote, uint16_t UdpPort, uint8_t* MessageBuff, uint16_t len);
+	int SendMessageOnNetwork(UDP* Udp, IPAddress Remote, uint16_t UdpPort, uint8_t* MessageBuff, uint16_t len);
 
 
 	/*

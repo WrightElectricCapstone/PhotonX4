@@ -54,9 +54,9 @@ int ParticleLink::SendMessageOnSerial(uint8_t* MessageBuff, uint16_t len)
 	return (BytesSent == len);
 }
 
-int ParticleLink::SendMessageOnNetwork(UDP* Udp, IPAddress* Remote, uint16_t UdpPort, uint8_t* MessageBuff, uint16_t len)
+int ParticleLink::SendMessageOnNetwork(UDP* Udp, IPAddress Remote, uint16_t UdpPort, uint8_t* MessageBuff, uint16_t len)
 {
-	Udp->beginPacket(*Remote, UdpPort);
+	Udp->beginPacket(Remote, UdpPort);
 	int BytesSent = Udp->write(MessageBuff, len);
 
 	Udp->endPacket();
