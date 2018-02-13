@@ -6,7 +6,7 @@ ParticleLink is a component library which facilitates the communication layer be
 This project has been tested for use with PX4, QGroundControl, and the Pixhawk 2.1 flight controller, however, there should be no reason why it wouldn't be usable with any MAVLink platform (i.e. Ardupilot).
 (You may need to change the baud rate to suit your particular flight controller)
 
-#Getting Started
+## Getting Started
 
 Make sure your Photon is configured to use the same WiFi network as your Ground Control Station.
 The first step is to flash the firmware to your Photon.  All necessary dependencies are included in the GitHub repo.
@@ -17,7 +17,7 @@ On your Ground Control Station, establish a telemetry link over UDP port 14550 w
 Click Connect and you should see a vehicle connection pop up!  If so, you're good to go!
 
 
-#Next Steps for this Project
+## Next Steps for this Project
 I would like to add support for the Electron as well, which is attractive for its go anywhere nature (allowing unlimited range).
 This is challenging for a number of reasons, first because of shifting IP adresses on cellular networks, and second from a security standpoint (no hijackings!)
 I think it will require setting up a static server at a fixed IP and having the plane and GCS communicate through this middle layer
